@@ -1,0 +1,26 @@
+<% if @user %>
+  <% if @user[:not_registered] %>
+    <%= "Sorry, #{@user.first_name.capitalize}, we could not create your acccount." %>
+  <% else %>
+    <%= "#{@user.first_name.capitalize}, your account has been created. Please <a href='/login'>login</a> using your e-mail address and password." %>
+  <% end %>
+<% end %>
+
+<h2>Register a New User</h2>
+<div class="container">
+  <form id="register_form" action="/register" method="post">
+    <label for="first_name">First Name:</label>
+    <input id="first_name" type="text" name="first_name">
+    <br>
+    <label for="last_name">Last Name:</label>
+    <input id="last_name" type="text" name="last_name">
+    <br>
+    <label for="email">E-mail:</label>
+    <input id="email" type="text" name="email">
+    <br>
+    <label for="password">Password:</label>
+    <input id="password" type="text" name="password">
+    <br>
+    <input type="submit" value="Register">
+  </form>
+</div>

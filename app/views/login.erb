@@ -1,0 +1,15 @@
+<% if @user.nil? %>
+  <%= "We could not log you in." %>
+<% end %>
+
+<div class="container">
+  <form id="register_form" action="/login" method="post">
+    <label for="email">E-mail:</label>
+    <input id="email" type="text" name="email">
+    <br>
+    <label for="password">Password:</label>
+    <input id="password" type="password" name="password">
+    <br>
+    <input type="submit" value="Login">
+  </form>
+</div>
