@@ -10,16 +10,16 @@
 <div class="container">
   <form id="register_form" action="/register" method="post">
     <label for="first_name">First Name:</label>
-    <input id="first_name" type="text" name="first_name">
+    <input id="first_name" type="text" name="user[first_name]">
     <br>
     <label for="last_name">Last Name:</label>
-    <input id="last_name" type="text" name="last_name">
+    <input id="last_name" type="text" name="user[last_name]">
     <br>
     <label for="email">E-mail:</label>
-    <input id="email" type="text" name="email">
+    <input id="email" type="text" name="user[email]">
     <br>
     <label for="password">Password:</label>
-    <input id="password" type="text" name="password">
+    <input id="password" type="text" name="user[password]">
     <br>
     <input type="submit" value="Register">
   </form>
